@@ -1,0 +1,40 @@
+@import '../../styles/mixins';
+
+.footer {
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+
+
+    &__container {
+        padding: 40px 0;
+        max-width: 1280px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include respond-to('tablet') {
+            padding: 48px 24px;
+        }
+
+        @include respond-to('mobile') {
+            justify-content: flex-start;
+        }
+    }
+
+    &__links {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 24px;
+        justify-content: flex-end;
+        list-style-type: none;
+
+        @include respond-to('mobile') {
+            gap: 18px;
+        }
+    }
+
+}

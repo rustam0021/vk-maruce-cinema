@@ -1,0 +1,288 @@
+@import '../../styles/mixins';
+
+.movie {
+    padding: 24px 0;
+    width: 100%;
+    min-height: 552px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+
+    @include respond-to('mobileL') {
+            padding: 0;
+    }
+
+    &__container {
+        max-width: 1280px;
+        width: 100%;
+        padding: 24px 0;
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+
+        @include respond-to('laptop') {
+            max-width: 1024px;
+            justify-content: center;
+        }
+
+        @include respond-to('tablet') {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        @include respond-to('mobileL') {
+            padding: 18px 0;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    &__rating {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 18px;
+        color: #9C9D9E;
+
+        @include respond-to('mobile') {
+            font-size: 14px;
+        }
+
+        @include respond-to('mobileL') {
+            font-size: 12px;
+        }
+
+        @include respond-to('mobileS') {
+            font-size: 10px;
+        }
+
+
+    }
+
+    &__ratingValue {
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #308E21;
+        padding: 4px 12px;
+        border-radius: 16px;
+    }
+
+    &__poster {
+        display: flex;
+        align-items: center;
+        min-height: 550px;
+        border-radius: 16px;
+
+        @include respond-to('laptop') {
+            min-height: 400px;
+        }
+        
+        @include respond-to('tablet') {
+            min-height: 350px;
+        }
+
+        @include respond-to('mobile') {
+            min-height: 280px;
+        }
+
+        @media(max-width: 650px) {
+            min-height: 180px;
+        }
+
+        @include respond-to('mobileL') {
+            min-height: 180px;
+        }
+
+        @include respond-to('mobileL') {
+            min-height: 100px;
+        }
+    }
+
+    &__poster img {
+        max-width: 680px;
+        border-radius: 16px;
+
+        @include respond-to('laptop') {
+            max-width: 540px;
+        }
+
+        @include respond-to('tablet') {
+            max-width: 630px;
+        }
+
+        @include respond-to('mobile') {
+            max-width: 580px;
+        }
+
+        @media(max-width: 650px) {
+            max-width: 400px;
+        }
+
+        @include respond-to('mobileL') {
+            max-width: 370px;
+        }
+
+        @include respond-to('mobileL') {
+            max-width: 320px;
+        }
+
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+
+        @include respond-to('laptop') {
+            font-size: 32px;
+        }
+
+        @include respond-to('mobile') {
+            font-size: 28px;
+        }
+
+        @include respond-to('mobileL') {
+            font-size: 24px;
+        }
+
+        @include respond-to('mobileS') {
+            font-size: 20px;
+        }
+    }
+
+    &__description {
+        font-size: 24px;
+        color: #9C9D9E;
+
+        @include respond-to('laptop') {
+            font-size: 18px;
+        }
+
+        @include respond-to('mobileL') {
+            font-size: 16px;
+        }
+
+        @include respond-to('mobileS') {
+            font-size: 12px;
+        }
+
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @include respond-to('laptop') {
+            gap: 12px;
+        }
+
+        @media(max-width: 650px) {
+            gap: 8px;
+        }
+
+        @include respond-to('mobileL') {
+            gap: 6px;
+        }
+    }
+
+    &__btn {
+        text-decoration: none;
+        padding: 16px 48px;
+        background-color: #393B3C;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 500;
+        color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 28px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+
+        @include respond-to('laptop') {
+            padding: 12px 32px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @include respond-to('mobileL') {
+            padding: 8px 28px;
+            font-size: 10px;
+        }
+
+        @include respond-to('mobileS') {
+            padding: 6px 24px;
+            font-size: 8px;
+        }
+    }
+
+    &__btn:hover {
+        background-color: #67A5EB;
+        border-color: #67A5EB;
+    }
+
+    &__btnFavorite,
+    &__btnUpdate {
+        padding: 16px 22px;
+        background-color: #393B3C;
+        border: 1px solid #000000;
+        border-radius: 28px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond-to('laptop') {
+            padding: 10px 18px;
+        }
+
+        @include respond-to('mobileL') {
+            padding: 7px 12px
+        }
+
+        @include respond-to('mobileS') {
+            padding: 5px 10px
+        }
+    }
+
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        max-width: 600px;
+
+        @include respond-to('tablet') {
+            align-self: center;
+        }
+
+        @include respond-to('mobile') {
+            max-width: 580px;
+        }
+
+        @media(max-width: 650px) {
+            max-width: 400px;
+        }
+
+        @include respond-to('mobileL') {
+            max-width: 370px;
+        }
+
+        @include respond-to('mobileL') {
+            max-width: 320px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

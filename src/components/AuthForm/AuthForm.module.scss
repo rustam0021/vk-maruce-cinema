@@ -1,0 +1,80 @@
+@import '../../styles/mixins';
+
+.authForm {
+
+    &__bg {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    &__popup {
+        position: relative;
+        padding: 64px 40px;
+        max-width: 420px;
+        width: 100%;
+        min-height: 435px;
+        background: #fff;
+        border-radius: 24px;
+
+        @media(max-width: 500px) {
+            padding: 50px 30px;
+            max-width: 350px;
+            min-height: 320px;
+        }
+
+        @include respond-to('mobileL') {
+            padding: 35px 20px;
+            max-width: 300px;
+            min-height: 300px;
+        }
+    }
+
+    &__popupClose {
+        position: absolute;
+        padding: 12px;
+        right: -64px;
+        top: -24px;
+        width: 48px;
+        height: 48px;
+        border: none;
+        background-color: #fff;
+        border-radius: 24px;
+
+        @include respond-to('mobile') {
+            padding: 10px;
+            right: -60px;
+            top: -15px;
+            width: 42px;
+            height: 42px;
+        }
+
+        @media(max-width: 550px) {
+            right: -45px;
+            top: -15px;
+        }
+
+        @include respond-to('mobileL') {
+            right: 15px;
+            top: 15px;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+.auth-form:hover {
+    opacity: 0.8;
+}
+
