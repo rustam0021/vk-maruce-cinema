@@ -22,7 +22,7 @@ type RandomMovieProps = {
 
 
 export const RandomMovie = ({movie, refetch}: RandomMovieProps ) => {
-    const [icon, setIcon] = useState<FavoriteIconType>('inActive');
+    const [setIcon] = useState<FavoriteIconType>('inActive');
 
     const dispatch = useDispatch();
     const queryClient = useQueryClient();

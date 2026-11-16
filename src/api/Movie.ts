@@ -1,4 +1,4 @@
-import { Movie, GenreListSchema, GenreListType, MovieList, MovieListSchema, MovieSchema } from "./ValidationSchema";
+import { Movie, GenreListSchema, GenreListType, MovieList, MovieListSchema } from "./ValidationSchema";
 import { RandomMovieSchema, RandomMovieType } from "./ValidationSchema";
 
 const API_URL = "https://cinemaguide.skillbox.cc";

@@ -10,10 +10,10 @@ export const Footer = () => {
         <footer className={style.footer}>
             <div className={style.footer__container}>
                 <ul className={style.footer__links}>
-                    <li className={style.footer__sociallink}><a href="#">{<VkIcon />}</a></li>
-                    <li className={style.footer__sociallink}><a href="#">{<YtIcon />}</a></li>
-                    <li className={style.footer__sociallink}><a href="#">{<OkIcon />}</a></li>
-                    <li className={style.footer__sociallink}><a href="#">{<TgIcon />}</a></li>
+                    <li className={style.footer__sociallink}><a href="https://vk.com">{<VkIcon />}</a></li>
+                    <li className={style.footer__sociallink}><a href="https://youtube.com">{<YtIcon />}</a></li>
+                    <li className={style.footer__sociallink}><a href="https://ok.ru">{<OkIcon />}</a></li>
+                    <li className={style.footer__sociallink}><a href="https://t.me">{<TgIcon />}</a></li>
                 </ul>
             </div>
         </footer>

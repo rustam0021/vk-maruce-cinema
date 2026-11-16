@@ -1,4 +1,4 @@
-import { boolean, success, z } from 'zod';
+import { z } from 'zod';
 
 // 1. Схема обьекта Movie
 export const MovieSchema = z.object({
