@@ -1,0 +1,47 @@
+.userPageProperty {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    justify-content: flex-start;
+    color: #ffffff;
+}
+
+.userPageAccountWrapper {
+    padding: 0 0 0 76px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.userPageAccountInfo,
+.userPageAccountEmail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.userPageAccountLabel {
+    font-size: 18px;
+}
+
+.userPageAccountData {
+    font-size: 24px;
+}
+
+.userPageLogout {
+    margin: 0;
+    padding: 16px 48px;
+    align-self: flex-start;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+    background-color: #67A5EB;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

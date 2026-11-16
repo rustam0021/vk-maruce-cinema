@@ -1,0 +1,202 @@
+@import '../../styles/mixins';
+
+.header {
+    position: relative; 
+    min-height: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        max-width: 1280px;
+        width: 100%;
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include respond-to('laptop') {
+            padding: 24px;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        align-items: center;
+        justify-content: space-between;
+        color: #ffffff;
+
+        @include respond-to('tablet') {
+            gap: 40px;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        a {
+            padding-left: 35px;
+            text-decoration: none;
+            background-image: url(../../styles/images/logo-icon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            align-self: flex-start;
+
+            @include respond-to('tablet') {
+                font-size: 28px;
+            }
+
+            @include respond-to('mobile') {
+                align-self: flex-start;
+                font-size: 24px;
+            }
+        }
+    }
+
+    &__navList {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+        list-style-type: none;
+
+        @include respond-to('mobile') {
+            margin-left: auto;
+            flex: 0;
+            gap: 20px; 
+        }
+    }
+
+    &__navListItem {
+        & a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        &--search {
+            position: relative;
+            max-width: 655px;
+            flex: 1;
+
+            @include respond-to('mobile') {
+                flex: 0;
+                position: static; 
+            }
+        }
+
+        &:first-child {
+            @include respond-to('mobile') {
+                display: none;
+            }
+        }
+    }
+
+    &__navGenresLinkText {
+        @include respond-to('mobile') {
+            display: none;
+        }
+    }
+
+    &__navGenresLinkIcon {
+        display: none;
+
+        @include respond-to('mobile') {
+            display: block;
+        }
+    }
+
+    &__navSearchField {
+        @include respond-to('mobile') {
+            display: none;
+        }
+    }
+
+    &__navSearchIcon {
+        display: none;
+        cursor: pointer;
+
+        @include respond-to('mobile') {
+            display: block;
+        }
+    }
+    
+    &__searchModal {
+        display: none;
+
+        @include respond-to('mobile') {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.85); 
+            z-index: 100;
+            align-items: flex-start;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+    }
+
+    &__searchModalContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: #2b2b2b; 
+        padding: 8px 16px;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    &__searchCloseBtn {
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        color: #ffffff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    &__profile {
+        font-size: 24px;
+    }
+
+    &__login-btn {
+        background-color: transparent;
+        border: none;
+        font-size: inherit;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    &__accountText {
+        @include respond-to('mobile') {
+            display: none;
+        }
+    }
+
+    &__accountIcon {
+        width: 24px;
+        height: 24px;
+        display: none;
+
+        @include respond-to('mobile') {
+            display: block;
+        }
+    }
+}
